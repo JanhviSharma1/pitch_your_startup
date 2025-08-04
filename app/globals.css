@@ -146,7 +146,7 @@
 }
 
 .no-result {
-  color: var(--color-black-100, #666); /* fallback value */
+  color: #666;
   font-size: 14px;
   font-weight: 400;
 }
@@ -176,7 +176,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f9f871; /* Example primary */
+  background-color: #f9f871;
   border: 5px solid black;
   box-shadow: 8px 8px 0 black;
   border-radius: 30px;
@@ -318,8 +318,8 @@
   transition: all 0.5s ease;
 }
 .startup-card:hover {
-  border-color: var(--primary);
-  background-color: var(--primary-100);
+  border-color: #ee2b69;
+  background-color: #f1d7df;
   box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
 }
 
@@ -352,7 +352,7 @@
 
 .startup-card_btn {
   border-radius: 9999px;
-  background-color: var(--black-200);
+  background-color: black;
   font-weight: 500;
   font-size: 16px;
   color: white;
