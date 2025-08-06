@@ -1,9 +1,9 @@
 import Image from "next/image";
 import SearchForm from "../../components/SearchForm";
-import StartupCard from "../../components/StartupCard";
+import StartupCard, { StartupTypeCard } from "../../components/StartupCard";
 import { STARTUPS_QUERY } from "@/sanity/lib/queries";
 import { sanityFetch, SanityLive } from "@/sanity/lib/live";
-import { client } from "@/sanity/lib/client";
+import { auth } from "@/auth";
 
 export default async function Home({
   searchParams,
@@ -11,28 +11,10 @@ export default async function Home({
   searchParams: Promise<{ query?: string }>;
 }) {
   const query = (await searchParams).query;
+  const params = { search: query || null };
 
-  const posts = await client.fetch(STARTUPS_QUERY);
-  console.log(JSON.stringify(posts, null, 2));
-
-  /*const posts = [
-    {
-      _createdAt: new Date(),
-      views: 55,
-      author: {
-        _id: 1,
-        name: "Jane Doe",
-        image:
-          "https://cdn.vectorstock.com/i/500p/11/22/robotic-hand-logo-template-vector-22681122.jpg",
-      },
-      _id: 1,
-      description: "Something",
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Nao_Robot_%28Robocup_2016%29.jpg/960px-Nao_Robot_%28Robocup_2016%29.jpg",
-      category: "Robots",
-      title: "We Robots",
-    },
-  ];*/
+  const session = await auth();
+  const { data: posts } = await sanityFetch({ query: STARTUPS_QUERY, params });
 
   return (
     <>
