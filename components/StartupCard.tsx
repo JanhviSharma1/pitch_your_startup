@@ -25,7 +25,7 @@ const StartupCard = ({ post }: { post: StartupTypeCard }) => {
       <div className="flex-between">
         <p className="startup_card_date">{formatDate(_createdAt)}</p>
         <div className="flex gap-1.5">
-          <EyeIcon className="size-6 text-[#EE2B69]" />
+          <EyeIcon className="size-6 text-primary" />
           <span className="text-16-medium">{views}</span>
         </div>
       </div>
@@ -67,5 +67,15 @@ const StartupCard = ({ post }: { post: StartupTypeCard }) => {
     </li>
   );
 };
+
+export const StartupCardSkeleton = () => (
+  <>
+    {[0, 1, 2, 3, 4].map((index: number) => (
+      <li key={cn("skeleton", index)}>
+        <Skeleton className="startup-card_skeleton" />
+      </li>
+    ))}
+  </>
+);
 
 export default StartupCard;
