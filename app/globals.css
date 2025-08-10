@@ -184,6 +184,7 @@ p.tag {
   z-index: 0;
   height: fit-content;
   max-width: 100%;
+  color: black;
 }
 
 .profile_title {

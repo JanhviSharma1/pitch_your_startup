@@ -5,14 +5,13 @@
 import * as Sentry from "@sentry/nextjs";
 
 Sentry.init({
-  dsn: "https://a764d6aa1d66b9258b4cb094becdcb8e@o4507537249927168.ingest.de.sentry.io/4507537257922640",
-
-  // Add optional integrations for additional features
+  dsn: "https://bf12cdafb4737c91531e87fa142f20ed@o4509815845421056.ingest.us.sentry.io/4509815881924608",
   integrations: [
-    Sentry.replayIntegration(),
     Sentry.feedbackIntegration({
       // Additional SDK configuration goes in here, for example:
       colorScheme: "system",
+      isNameRequired: true,
+      isEmailRequired: true,
     }),
   ],
 
