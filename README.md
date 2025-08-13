@@ -30,7 +30,7 @@ As the name suggests, it serves as a **directory for startups**, allowing founde
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/JanhviSharma1/YCDirectory.git
+git clone https://github.com/JanhviSharma1/pitch_your_startup.git
 cd pitch_your_startup
 ```
 
