@@ -31,7 +31,7 @@ As the name suggests, it serves as a **directory for startups**, allowing founde
 ### 1️⃣ Clone the repository
 ```bash
 git clone https://github.com/JanhviSharma1/YCDirectory.git
-cd YCDirectory
+cd pitch_your_startup
 ```
 
 ### 2️⃣ Install dependencies
