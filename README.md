@@ -32,5 +32,28 @@ As the name suggests, it serves as a **directory for startups**, allowing founde
 ```bash
 git clone https://github.com/JanhviSharma1/YCDirectory.git
 cd YCDirectory
+```
 
+### 2️⃣ Install dependencies
+```bash 
+npm install
+```
 
+### 3️⃣ Set up environment variables
+Create a .env.local file in the root directory and add:
+```bash
+AUTH_SECRET="your_auth_secret"
+AUTH_GITHUB_ID="your_github_id"
+AUTH_GITHUB_SECRET="your_github_secret"
+NEXT_PUBLIC_SANITY_PROJECT_ID="your_sanity_project_id"
+NEXT_PUBLIC_SANITY_DATASET="your_dataset"
+NEXT_PUBLIC_SANITY_API_VERSION="your_api_version"
+SANITY_WRITE_TOKEN="your_sanity_token"
+SENTRY_AUTH_TOKEN="your_sentry_token"
+```
+
+### 4️⃣ Run the development server
+```bash
+npm run dev
+```
+Open http://localhost:3000 to view the app.
